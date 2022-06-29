@@ -441,8 +441,7 @@ input {
             </div>
             <div class="botones">
               <button type="button" class="buy">Lo quiero!</button>
-              <button type="button" class="no-buy">Ya no lo quiero!</button>
-          </div>
+            </div>
           </div>
         </section>
     </div>
@@ -459,6 +458,7 @@ input {
   // const buyImg = document.querySelectorAll(".modal__content--slider input")
 
 const newB = [...buttonHero];
+
   newB.forEach(item=>  {
     item.addEventListener('click', () => {
     modal.classList.remove('hidden')
@@ -473,32 +473,18 @@ const newB = [...buttonHero];
     modal.classList.remove('visible')
   })
 
-  const mostrar = (e) => {
-
-  return e.target.alt;
-  }
-
-let tarzan = [];
+   
+let wishes;
 
 buyImg.addEventListener("click", (e)=> {
-  
-tarzan.push(mostrar(e)) 
-return tarzan
-
+  wishes = e.target.alt
 })
-
-console.log(tarzan)
 
 buyButton.addEventListener("click", ()=>{
 
-  console.log(`El ${tarzan.reverse().slice(0,1).join()} es tuyo`)
-  // console.log(tarzan.reverse().slice(0,1).join())
-  // let resultado = tarzan.reverse().slice(0,1).join("")
-
-  // console.log(`El ${resultado} es tuyo`)
+  console.log(`El ${wishes} es tuyo`)
+  
 })
- 
-
 
 </script>
 </body>
